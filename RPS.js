@@ -18,22 +18,16 @@ function computerPlay() {
 var userPlay = prompt();
 
 //single round
-function oneRound (comPick, userPlay) {
-	outcome = (comPick && userPlay);
-	
-	switch(outcome) {
-		case (comPick == userPlay);
-			return "It's a tie!"
-		case (Paper, Rock)
-			return "You Lose! Paper beats Rock"
-		case (Rock, Paper)
-			return "You Win! Paper covers Rock!"
-		case (Scissors, Rock)
-			return "You Win! Rock crushes Scissors!"
-		case (Rock, Scissors)
-			return "You Lose! Rock crushes Scissors!"
-		case (Scissors, Paper)
-			return "You Lose! Scissors cut Paper!"
-		case (Paper, Scissors)
-			return "You Win! Scissors cut Paper!"
+function oneRound () {
+	if (comPick == userPlay) {
+		return "It's a tie!"
+	}	
+	else if (('Paper', 'Rock') ||
+	('Scissors', 'Paper') ||
+		('Rock', 'Scissors')) { 
+			return "You Lose! " + comPick + " beats " + userPlay;
+		}
+	else {
+		return "You Win! " + userPlay + " beats " + userPlay;
+	}
 }
