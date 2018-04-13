@@ -7,3 +7,16 @@
 // TOP Project: Game of RPS v. Computer
 
 //Computer random number
+
+function computerPlay() {
+	comPick = Math.floor(Math.random() * Math.floor(3));
+	
+	switch(comPick) {
+	case 0:
+		return comPick = 'Rock';
+	case 1:
+		return comPick = 'Paper';
+	case 2:
+		return comPick = 'Scissors';
+	}
+}
